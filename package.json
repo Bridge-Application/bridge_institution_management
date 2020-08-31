@@ -1,0 +1,25 @@
+{
+  "name": "bridge_institution_management",
+  "version": "1.0.0",
+  "description": "Management back-end for institutions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bridge-Application/bridge_institution_management.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bridge-Application/bridge_institution_management/issues"
+  },
+  "homepage": "https://github.com/Bridge-Application/bridge_institution_management#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
