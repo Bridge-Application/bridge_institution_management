@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const dbconnection = require("./mongoose_connection");
 const sha256 = require('crypto-js/sha256')
+const patientHashModel = require('./schemas/patientHash');
 
 dbconnection();
 
@@ -16,7 +17,7 @@ app.get("/add/user", (req, res) => {
     res.render("user_form");
 });
 
-app.post("/add/user", (req, res) => {
+app.post("/add/user", async (req, res) => {
     const fname = req.body.fname;
     const lname = req.body.lname;
     const id = req.body.id;
@@ -30,7 +31,14 @@ app.post("/add/user", (req, res) => {
     const shortenHash = hash.toString().substring(0, 6);
 
     //Store data into institution database
-    
+    const model = new patientHashModel({
+      firstName: fname,
+      lastName: lname,
+      patientID: id,
+      hash: shortenHash,
+    })
+
+    await model.save();
 
     res.render("created_user", {
         unique: shortenHash,
