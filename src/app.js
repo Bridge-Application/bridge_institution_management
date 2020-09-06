@@ -12,8 +12,10 @@ app.get('/add/user', (req, res) => {
 })
 
 app.post('/add/user', (req, res) => {
-  console.log(req.body);
-  res.render('created_user');
+  const fname = req.body.fname;
+  const lname = req.body.lname;
+  const id = req.body.id;
+  res.render('created_user', {unique: 'Isaac', first: fname, last: lname, patientID: id});
 })
 
 app.listen(port, () => {
