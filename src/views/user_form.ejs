@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <div class="container"></div>
+        <div class="row align-items-center">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 my-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Test Institution</h3>
+                        <form action="/add/user" method="POST">
+                            <div class="row">
+                                <div class="col">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="First name"
+                                        name="fname"
+                                    />
+                                </div>
+                                <div class="col">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Last name"
+                                        name="lname"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="margin-top: 15px">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Patient-ID"
+                                        name="id"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="margin-top: 15px">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary btn-lg btn-block"
+                                    >
+                                        Sign in
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span
+                                                class="input-group-text"
+                                                id="inputGroup-sizing-default"
+                                                >First Name</span
+                                            >
+                                        </div>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            aria-label="Default"
+                                            aria-describedby="inputGroup-sizing-default"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span
+                                                class="input-group-text"
+                                                id="inputGroup-sizing-default"
+                                                >Last Name</span
+                                            >
+                                        </div>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            aria-label="Default"
+                                            aria-describedby="inputGroup-sizing-default"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </body>
+</html>
